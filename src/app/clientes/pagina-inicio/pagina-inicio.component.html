@@ -1,0 +1,28 @@
+<h1 class="centrado bg-success">Listado de Cliente</h1>
+
+<div class="row">
+    <!--Fila--->
+    <div class="col">
+        <!--Columna--->
+        <h3>Clientes</h3>
+        <hr>
+        <ul>
+            <li>Eudocio Garcia Olivera Siempre Papa</li>
+            <li>Angelina Martinez Garcia</li>
+            <li>Miguel Angel Garcia Martinez</li>
+        </ul>
+    </div>
+
+    <div class="col">
+        <h3>Agregar</h3>
+        <hr>
+        <p>{{nuevoCliente.nombre}}</p>
+        <form (submit)="agregar()">
+            <input type="text" name="nombre" [(ngModel)]="nuevoCliente.nombre" placeholder="Nombre">
+
+            <input type="number" name="credito" [(ngModel)]="nuevoCliente.credito" placeholder="Credito">
+            <button type="submit">Agregar</button>
+        </form>
+    </div>
+
+</div>

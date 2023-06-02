@@ -1,0 +1,21 @@
+<h1 class="centrado">Lista de clientes {{titulo}}</h1>
+
+<ul class="list-group">
+    <button (click)="borrar()">Borro Estatico</button>
+    <div *ngIf="etiquetaBorrado; else noBorrado">
+        <h3 class="text-primary">Empleado Borrado</h3>
+        <span>{{etiquetaBorrado}}</span>
+    </div>
+
+    <ng-template #noBorrado>
+        <h3>NO SE Elimino EL EMPLEADO</h3>
+
+    </ng-template>
+
+    <li class="list-group-item" *ngFor="let empleado of empleados">
+        <h4>{{empleado.nombre | titlecase}} {{empleado.apellidos | titlecase}} y su sueldo es {{empleado.suedo | currency}}</h4>
+
+        <hr>
+    </li>
+
+</ul>
